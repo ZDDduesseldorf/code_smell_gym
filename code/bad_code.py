@@ -5,7 +5,9 @@ def process_elements(input_lst):
         elif len(input_lst) > 1:
             for element in input_lst:
                 if isinstance(element, (str, int)):
-                    if element.lower() != "stop":
+                    if element.lower() == "stop":
+                        print("Found stop command:", element)
+                    else:
                         try:
                             got_number = int(element)
                         except ValueError:
@@ -17,8 +19,6 @@ def process_elements(input_lst):
                                 print("Got zero.")
                             else:
                                 print("Got a negative number.")
-                    else:
-                        print("Found stop command:", element)
         else:
             print("List is too short to process.")
         break
