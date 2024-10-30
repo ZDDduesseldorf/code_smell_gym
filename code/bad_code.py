@@ -22,3 +22,11 @@ def process_elements(input_lst):
 # Use this function
 input_lst = ["1", "-2", "3", "stop"]
 process_elements(input_lst)
+
+def number_check(input_lst):
+    if input_lst > 0:
+        print("Got a positive number!")
+    elif input_lst == 0:
+        print("Got zero.")
+    else:
+        print("Got a negative number.")
